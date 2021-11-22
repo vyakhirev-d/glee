@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        
+        <div class="container-large">
             <div class="header__inner">
                 <a class="logo" href="#">
                     <img class="logo__img" src="images/logo.png" alt="logo">
@@ -35,27 +35,26 @@
                     </ul>
                 </nav>
                 <div class="user-nav">
-                        <a class="user-nav__link link__search" href="#">
-                            <img class="user-nav__item-img" src="images/icons/search-icon.svg" alt="search icon">
-                        </a>
+                    <input class="user-nav__item-input" type="text" placeholder="search...">
+                        <button class="user-nav__item-search" type="button" >
+                            <img class="user-nav__search-img" src="images/icons/search-icon.svg" alt="search icon">
+                        </button>
                         <a class="user-nav__item-link link__favorits" href="#">
                             <img class="user-nav__item-img" src="images/icons/heart-icon.svg" alt="favorits icon">
                             <div class="user-nav__number favorits__number">0</div>
                         </a>
                         <a class="user-nav__item-link link__cart" href="#">
                             <img class="user-nav__item-img" src="images/icons/cart-icon.svg" alt="cart icon">
-                            <div class="user-nav__number cart__namber">0</div>
+                            <div class="user-nav__number cart__number">0</div>
                         </a>               
                    
-                        <a class="user-nav__item-link link__menu" href="#">
-                            <img class="user-nav__item-img" src="images/icons/menu-icon.svg" alt="button icon">
-                        </a>
-                </div>           
+                        <button class="user-nav__item-btn" type="button">
+                            <img class="user-nav__btn-img" src="images/icons/button-icon.svg" alt="button icon">
+                        </button>
+                </div>    
                    
-                                    
-                   
-                
             </div>
+        </div>         
         
     </header>
 
@@ -145,18 +144,31 @@
                         ©2020 CopyRight Example. All rights reserved. 
                     </p>
                     <div class="footer-bottom__menu">
-                        <a class="footer-bottom__menu-link" href="#">
-                            Home    
-                        </a>
-                        <a class="footer-bottom__menu-link" href="#">
-                            About
-                        </a>
-                        <a class="footer-bottom__menu-link" href="#">
-                            Blog
-                        </a>
-                        <a class="footer-bottom__menu-link" href="#">
-                            Contact
-                        </a>
+                        <ul class="footer-bottom__menu-list">
+                            <li class="footer-bottom__menu-item">
+                                <a class="footer-bottom__menu-link" href="#">
+                                    Home    
+                                </a>
+                            </li>
+                            <li class="footer-bottom__menu-item">
+                                <a class="footer-bottom__menu-link" href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li class="footer-bottom__menu-item">
+                                <a class="footer-bottom__menu-link" href="#">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="footer-bottom__menu-item">
+                                <a class="footer-bottom__menu-link" href="#">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>                    
+                        
+                        
+                        
                     </div>
                 </div>         
            

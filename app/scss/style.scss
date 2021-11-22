@@ -11,6 +11,7 @@
         align-items: center;
     }
 }
+
 .menu {
     &__list {
         display: flex;
@@ -27,42 +28,47 @@
 }
 .user-nav {
     display: flex;
-    padding-right: 15px;
+
     &__item {
         display: flex;
-        position: relative;
+    }
+    &__item-input {
+        display: none;
+    }
+    &__item-input::placeholder {
+        display: none;
+    }
+    &__item-input--active {
+        display: block;
+        background-color: #edf1f4;
+        border: none;
+        border-radius: 25px;
+        width: 39%;       
+    }
+    &__item-input--active::placeholder {
+        color: #436372;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        padding-left: 15px;
+    }
+    &__item-search {
+        border: none;
+        background-color: #edf1f4;
+        padding: 17px;
+        border-radius: 25px;
+        cursor: pointer;
     }
     &__item-link {
-        padding-left: 80px;
-    }
-    .link__search {
         position: relative;
-    }
-    .link__search::before {
-        position: absolute;
-        content: "";
-        width: 50px;
-        height: 50px;
-        background-color: #edf1f4;
-        border-radius: 50%;
-        top: -16px;
-        right: -17px;
-        z-index: -1;
     }
     .link__favorits {
-        position: relative;
-    }
-    .link__favorits::before {
-        position: absolute;
-        content: "";
-        width: 90px;
-        height: 50px;
         background-color: #fcd7b6;
+        margin-left: 24px;
+        padding: 23px 32px 12px 40px;
         border-radius: 50px 0 0 50px;
-        top: -16px;
-        right: -30px;
-        z-index: -1;
     }
+
     .favorits__number {
         color: #243f4d;
         @extend %dmsans-400;
@@ -70,64 +76,49 @@
         line-height: 18px;
         text-align: center;
         position: absolute;
-        top: -10px;
-        right: -9px;
+        top: 13px;
+        left: 51px;
         background-color: #ffffff;
         border-radius: 50%;
         width: 16px;
         height: 16px;
     }
     .link__cart {
-        position: relative;
-        padding-left: 60px;
-    }
-    .link__cart::before {
-        position: absolute;
-        content: "";
-        width: 90px;
-        height: 50px;
         background-color: #fcd7b6;
-        border-radius: 0 50px 50px 0;
-        top: -16px;
-        right: -41px;
-        z-index: -1;
+        padding: 22px 42px 15px 28px;
+        border-radius: 0px 50px 50px 0px;
     }
+
     .link__cart::after {
         position: absolute;
         content: "";
         height: 32px;
         width: 1px;
         background-color: #fde7d3;
-        top: -7px;
-        right: 50px;
+        top: 10px;
+        right: 85px;
     }
-    .cart__namber {
+    .cart__number {
         color: #243f4d;
         @extend %dmsans-400;
         font-size: 10px;
         line-height: 18px;
         text-align: center;
         position: absolute;
-        top: -10px;
-        right: -9px;
+        top: 12px;
+        right: 34px;
         background-color: #ffffff;
         border-radius: 50%;
         width: 16px;
         height: 16px;
     }
-    .link__menu {
-        position: relative;
-    }
-    .link__menu::before {
-        position: absolute;
-        content: "";
-        width: 50px;
-        height: 50px;
+    &__item-btn {
+        margin-left: 20px;
+        border: none;
         background-color: #a3bbc8;
-        border-radius: 50%;
-        top: -16px;
-        right: -14px;
-        z-index: -1;
+        padding: 15px;
+        border-radius: 23px;
+        cursor: pointer;
     }
 }
 
@@ -203,18 +194,27 @@
     padding: 40px 15px 40px 0px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @extend %rubik-400;
     font-size: 14px;
     line-height: 32px;
-    color: #7b7b7b;    
-    
-    .footer-bottom__menu .footer-bottom__menu-link {
-        color: #7b7b7b;
+    color: #7b7b7b;
+    &__menu{
+        display: flex;
+    }
+    &__menu-item{
         padding: 0 15px;
+        display: inline-block;
         
     }
-    .footer-bottom__menu-link + .footer-bottom__menu-link{
-        border-left: 1px solid #7b7b7b;
+
+    &__menu-link {
+        color: #7b7b7b;
+
+       
+    }
+    .footer-bottom__menu-item + .footer-bottom__menu-item {
+        border: 1px solid #7b7b7b;
     }
 }
 @import "media";
