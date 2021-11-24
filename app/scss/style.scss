@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -215,4 +216,52 @@
         border-left: 1px solid #7b7b7b;
     }
 }
+
+.top-slider {
+    background-image: url(../images/slider-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 220px 0 45px 0;
+    
+    &__title {
+        max-width: 470px;
+        color: #243f4d;
+        font-size: 72px;
+        line-height: 70px;
+        @extend %rubik-500;
+        margin-bottom: 45px;
+    }
+    &__text {
+        max-width: 370px;
+        font-size: 18px;
+        line-height: 30px;
+        @extend %rubik-400;
+        color: #436372;
+        padding-bottom: 45px;
+    }
+    &__link {
+        background-color: #a3bbc8;
+        padding: 25px 100px 20px 30px;
+        font-size: 15px;
+        line-height: 12px;
+        @extend %rubik-400;
+        color: #ffffff;
+        position: relative;
+    }
+    &__link::before{
+        content: '';
+        width: 30px;
+        height: 10px;
+        background-image: url(../images/slider-link-arrow.svg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 28px;
+        right: 20px;
+    }
+   
+}
+
 @import "media";
