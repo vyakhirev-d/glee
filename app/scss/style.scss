@@ -217,13 +217,16 @@
     }
 }
 
-.top-slider {
+.slider-top {
     background-image: url(../images/slider-bg.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 220px 0 45px 0;
-    
+
+    &__item-inner {
+        display: flex;
+    }
     &__title {
         max-width: 470px;
         color: #243f4d;
@@ -240,7 +243,12 @@
         color: #436372;
         padding-bottom: 45px;
     }
+    &__img {
+        margin-left: auto;
+    }
     &__link {
+        display: block;
+        max-width: 200px;
         background-color: #a3bbc8;
         padding: 25px 100px 20px 30px;
         font-size: 15px;
@@ -249,8 +257,8 @@
         color: #ffffff;
         position: relative;
     }
-    &__link::before{
-        content: '';
+    &__link::before {
+        content: "";
         width: 30px;
         height: 10px;
         background-image: url(../images/slider-link-arrow.svg);
@@ -261,7 +269,66 @@
         top: 28px;
         right: 20px;
     }
-   
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        li {
+            margin-left: 10px;
+            margin-top: 210px;
+            button {
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                @extend %rubik-500;
+                font-size: 11px;
+                line-height: 9px;
+                text-align: center;
+                color: #667983;
+                border: none;
+                border-radius: 50%;
+                background-color: #fde3cc;
+            }
+
+            &.slick-active {
+                button {
+                    background-color: #ffffff;
+                    color: #243f4d;
+                }
+            }
+        }
+    }
+}
+.slider-bottom {
+    background-color: #fef7f0;
+    padding: 45px 150px 45px 150px;
+    margin-bottom: 75px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        display: flex;
+        align-items: start;
+    }
+    &__img {
+        margin-right: 25px;
+        padding-top: 8px;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 40px;
+        color: #414141;
+    }
+    &__text {
+        @extend %dmsans-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #585858;
+
+    }
 }
 
 @import "media";
