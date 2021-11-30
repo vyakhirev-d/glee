@@ -10,6 +10,7 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 2000
 
-    })
-
+    });
+    
+    var mixer = mixitup('.products__content');
 });
