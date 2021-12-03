@@ -19,3 +19,10 @@ $accent: #ffffff;
     font-family: 'Rubik-Regular', sans-serif;
     font-weight: 400;
 }
+
+@function max($number...) {
+  @return m#{a}x(#{$number});
+}
+@function min($number...) {
+  @return m#{i}n(#{$number});
+}
