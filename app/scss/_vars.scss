@@ -1,28 +1,57 @@
-$accent: #ffffff;
-%dmsans-700{
-    font-family: 'DMSans-Bold', sans-serif;
+$link: #436372;
+$bg: #ffffff;
+$bg2: #a3bbc8;
+$bg3: #fef7f0;
+$text: #243f4d;
+$text-footer: #7b7b7b;
+$title: #191919;
+%dmsans-700 {
+    font-family: "DMSans-Bold", sans-serif;
     font-weight: 700;
 }
-%dmsans-500{
-    font-family: 'DMSans-Medium', sans-serif;
+%dmsans-500 {
+    font-family: "DMSans-Medium", sans-serif;
     font-weight: 500;
 }
-%dmsans-400{
-    font-family: 'DMSans-Regular', sans-serif;
+%dmsans-400 {
+    font-family: "DMSans-Regular", sans-serif;
     font-weight: 400;
 }
-%rubik-500{
-    font-family: 'Rubik-Medium', sans-serif;
+%rubik-500 {
+    font-family: "Rubik-Medium", sans-serif;
     font-weight: 500;
 }
-%rubik-400{
-    font-family: 'Rubik-Regular', sans-serif;
+%rubik-400 {
+    font-family: "Rubik-Regular", sans-serif;
     font-weight: 400;
+}
+%btn {
+    display: block;
+    max-width: 200px;
+    background-color: $bg2;
+    padding: 25px 100px 20px 30px;
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-400;
+    color: $bg;
+    position: relative;
+    &::after {
+        content: "";
+        width: 30px;
+        height: 10px;
+        background-image: url(../images/slider-link-arrow.svg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 26px;
+        right: 20px;
+    }
 }
 
 @function max($number...) {
-  @return m#{a}x(#{$number});
+    @return m#{a}x(#{$number});
 }
 @function min($number...) {
-  @return m#{i}n(#{$number});
+    @return m#{i}n(#{$number});
 }
