@@ -22,7 +22,7 @@
     }
     &__list-link {
         color: $link;
-        @extend %rubik-500;
+        @extend %rubik-700;
         font-size: 15px;
         line-height: 12px;
     }
@@ -557,6 +557,7 @@
         font-size: 16px;
         color: #262626;
         position: relative;
+        margin-right: 15px;
         &::after {
             content: "";
             position: absolute;
@@ -564,7 +565,7 @@
             height: 11px;
             background-image: url(../images/blog-top-arrow.svg);
             top: 10px;
-            right: -20px;
+            right: -15px;
         }
     }
 }
@@ -624,14 +625,34 @@
         @extend %rubik-400;
         font-size: 12px;
         line-height: 30px;
-        margin-left: 5px;
+        margin-left: 25px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url("../images/icons/date-icon.svg");
+            width: 15px;
+            height: 13px;
+            top: 8px;
+            left: -20px;
+        }
     }
     &__link-author {
         color: #222933;
         @extend %rubik-400;
         font-size: 12px;
         line-height: 30px;
-        margin-left: 30px;
+        margin-left: 50px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url("../images/icons/admin-icon.svg");
+            width: 15px;
+            height: 14px;
+            top: 8px;
+            left: -20px;
+        }
     }
 }
 
@@ -646,7 +667,7 @@
     &__item {
         padding: 260px 0 90px;
     }
-    &__item--withoutblog {
+    &__item--short {
         padding: 80px 0 90px;
     }
 }
@@ -707,4 +728,34 @@
     }
 }
 
+.terms {
+    margin-bottom: 120px;
+    color: $text;
+    font-size: 16px;
+    line-height: 30px;
+    @extend %rubik-400;
+    &__title {
+        margin-bottom: 25px;
+        margin-top: 70px;
+        font-size: 24px;
+        line-height: 40px;
+        @extend %rubik-500;
+    }
+    ul.term__list {
+        margin-bottom: 70px;
+    }
+    &__list-item {
+        margin-bottom: 30px;
+        list-style: none;
+        counter-increment: my-counter;
+        position: relative;
+        margin-left: 40px;
+        &::before {
+            content: "0" counter(my-counter) ".";
+            position: absolute;
+            top: 0;
+            left: -38px;
+        }
+    }
+}
 @import "media";

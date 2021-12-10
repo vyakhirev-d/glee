@@ -29,34 +29,37 @@ body {
     margin-bottom: 35px;
 }
 .breadcrumbs {
-    &__list{
+    &__list {
         display: flex;
         justify-content: center;
-        
     }
-    &__item{
+    &__item {
         display: block;
         margin: 0 10px;
         position: relative;
-        
-        &::after{
-            content: '/';
+
+        &::after {
+            content: "/";
             position: absolute;
             color: #737980;
             top: 1px;
             right: -12px;
         }
-        &:last-child{
-            &::after{
+        &:last-child {
+            &::after {
                 display: none;
-            } 
+            }
         }
-
     }
     &__link {
         color: #737980;
         @extend %rubik-400;
         font-size: 14px;
     }
-
+}
+.title--colortext {
+    color: $text;
+}
+a.blog-top__link--colortext{
+    color: $text;
 }
