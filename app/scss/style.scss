@@ -758,4 +758,228 @@
         }
     }
 }
+.info {
+    margin-bottom: 115px;
+}
+.info-top {
+    margin-bottom: 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img {
+        max-width: 570px;
+        object-fit: cover;
+        width: 100%;
+    }
+    &__items {
+        margin-left: 40px;
+    }
+    ul.info-top__subtitle {
+        padding-left: 165px;
+        position: relative;
+        margin-bottom: 50px;
+        &::before {
+            content: "12";
+            @extend %rubik-700;
+            font-size: 140px;
+            line-height: 1.2;
+            letter-spacing: -16px;
+            color: $bg2;
+
+            position: absolute;
+            top: -47px;
+            left: 0;
+        }
+    }
+    &__title {
+        @extend %dmsans-700;
+        font-size: 36px;
+        line-height: 32px;
+        color: $text;
+        margin-bottom: 45px;
+    }
+    &__text {
+        @extend %rubik-400;
+        font-size: 13px;
+        line-height: 30px;
+        color: $text;
+        margin-bottom: 60px;
+        max-width: 555px;
+    }
+    &__numbers {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        border-top: 2px solid #e6eaf0;
+    }
+    &__numbers-item {
+        display: flex;
+        margin-right: 25px;
+        padding: 10px 25px 10px 0px;
+
+        border-right: 2px solid #e6eaf0;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    &__numbers-text {
+        margin-left: 20px;
+    }
+    &__numbers-numbers {
+        @extend %dmsans-700;
+        font-size: 36px;
+        line-height: 38px;
+        color: $text;
+    }
+    &__numbers-label {
+        color: #4c4c4c;
+        line-height: 17px;
+    }
+}
+.info-bottom {
+    background-color: #fcd7b6;
+    padding: 165px 0 125px;
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @extend %dmsans-700;
+        font-size: 36px;
+        line-height: 32px;
+        color: $text;
+    }
+    &__numbers {
+        margin: 20px 0 20px;
+    }
+    &__label {
+        font-size: 18px;
+    }
+}
+.team {
+    margin-bottom: 115px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.team-content {
+    color: $text;
+    width: 290px;
+
+    &__title {
+        font-size: 36px;
+        line-height: 32px;
+        margin-bottom: 35px;
+    }
+    &__text {
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+    &__link {
+        display: block;
+        max-width: 170px;
+        background-color: $bg2;
+        padding: 25px 55px 20px 20px;
+        font-size: 15px;
+        line-height: 12px;
+        @extend %rubik-700;
+        color: $bg;
+        position: relative;
+        border-radius: 6px;
+        &::after {
+            content: "";
+            width: 15px;
+            height: 11px;
+            background-image: url("../images/icons/arrow-right-icon.svg");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 23px;
+            right: 20px;
+        }
+    }
+}
+.team-gallery {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 40px;
+        column-gap: 30px;
+    }
+    &__item-bg {
+        width: 375px;
+        height: 320px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 330px;
+        height: 115px;
+        background-color: #fff;
+        padding: 0 20px;
+        margin-top: -45px;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    }
+    &__text {
+        padding: 30px 0 25px;
+    }
+    &__text-name {
+        color: $link;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+    &__text-position {
+        @extend %rubik-400;
+        color: #565872;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    &__social {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social-link {
+        display: block;
+        margin: 0 14px;
+        background-color: #f6f6f6;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: #f6f6f6;
+            border-radius: 50%;
+            position: absolute;
+            top: -11px;
+            right: -11px;
+            z-index: -1;
+        }
+    }
+    &__social-link--google {
+        &::after {
+            top: -12px;
+            right: -8px;
+        }
+    }
+}
 @import "media";

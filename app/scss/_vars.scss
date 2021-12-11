@@ -38,12 +38,13 @@ $title: #191919;
     line-height: 12px;
     @extend %rubik-400;
     color: $bg;
+    border-radius: 6px;
     position: relative;
     &::after {
         content: "";
         width: 30px;
         height: 10px;
-        background-image: url(../images/slider-link-arrow.svg);
+        background-image: url('../images/slider-link-arrow.svg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -52,6 +53,7 @@ $title: #191919;
         right: 20px;
     }
 }
+
 
 @function max($number...) {
     @return m#{a}x(#{$number});
