@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const GulpUglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 
 
@@ -39,7 +40,8 @@ function scripts() {
             'node_modules/slick-carousel/slick/slick.js',
             'node_modules/mixitup/dist/mixitup.js',
             'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-            'app/js/main.js'
+            'node_modules/rateyo/src/jquery.rateyo.js',
+            'app/js/main.js',
         ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
@@ -90,5 +92,4 @@ exports.watching = watching;
 exports.images = images;
 exports.build = series(cleanDist, images, build);
 exports.cleanDist = cleanDist;
-
 exports.default = parallel(styles, scripts, browsersync, watching);
