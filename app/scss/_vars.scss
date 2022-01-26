@@ -40,6 +40,8 @@ $title: #191919;
     color: $bg;
     border-radius: 6px;
     position: relative;
+    border: none;
+    cursor:pointer;
     &::after {
         content: "";
         width: 30px;

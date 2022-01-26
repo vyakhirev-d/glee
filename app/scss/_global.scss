@@ -15,10 +15,10 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 15px 0 25px;
 }
 .container-large {
-    max-width: 1800px;
+    max-width: 1820px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -64,8 +64,7 @@ a.blog-top__link--colortext {
     color: $text;
 }
 .pagination {
-    display: flex;
-    justify-content: center;
+    display: flex;   
     &__list {
         display: flex;
     }
