@@ -1034,7 +1034,7 @@
     &__title {
         @extend %dmsans-700;
         font-size: 16px;
-        line-height: 1,2;
+        line-height: 1, 2;
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-bottom: 20px;
@@ -1069,7 +1069,7 @@
 }
 .filter-price {
     margin-bottom: 75px;
-    .filter__title{
+    .filter__title {
         margin-bottom: 10px;
     }
     .irs-min,
@@ -1097,9 +1097,8 @@
             display: none;
         }
     }
-    &__label{
-       
-        &-box{
+    &__label {
+        &-box {
             margin-top: 5px;
             display: flex;
             justify-content: space-between;
@@ -1133,11 +1132,10 @@
     }
 }
 .recent-products {
-    .filter__title{
+    .filter__title {
         margin-bottom: 25px;
     }
     &__item {
-        
         margin-bottom: 18px;
         display: flex;
     }
@@ -1180,8 +1178,9 @@
 
 .product-two {
     &__content {
+        margin-top: 10px;
         max-width: 850px;
-        margin-bottom: 75px;
+        margin-bottom: 35px;
     }
     &__item {
         display: flex;
@@ -1190,11 +1189,11 @@
     &__item-img {
         border: 2px solid #f2f2f2;
         min-width: 370px;
-        min-height: 500px;
+        height: 500px;
         object-fit: none;
     }
     &__item-box {
-        margin: 90px 55px 0 70px;
+        margin: 90px 55px 0 60px;
         min-width: 415px;
         @extend %rubik-400;
         color: #333333;
@@ -1208,7 +1207,7 @@
         display: block;
         font-size: 30px;
         line-height: 45px;
-        margin: 35px 0px;
+        margin: 30px 0px 20px;
     }
     &__star {
         padding: 0;
@@ -1220,6 +1219,28 @@
         color: $text;
         margin-bottom: 35px;
     }
+
+    &__item-wrapper {
+        width: 110px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item-link {
+        height: 50px;
+        width: 50px;
+        background-color: #fefefe;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: $bg2;
+            path {
+                fill: $bg;
+            }
+        }
+    }
+
     &__pagination {
         margin-left: 300px;
         margin-right: 600px;
